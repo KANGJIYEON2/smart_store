@@ -1,6 +1,11 @@
 import { useReducer, useEffect } from "react";
-import { NAVER_ID, NAVER_SECRET } from "../config";
 import axios from "axios";
+
+const NAVER_ID = import.meta.env.VITE_NAVER_ID;
+const NAVER_SECRET = import.meta.env.VITE_NAVER_SECRET;
+
+console.log("NAVER_ID:", NAVER_ID);
+console.log("NAVER_SECRET:", NAVER_SECRET);
 
 function reducer(state, action) {
   switch (action.type) {
