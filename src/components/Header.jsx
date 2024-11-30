@@ -1,7 +1,9 @@
-import NavBar from "./NavBar";
+import { useNavigate } from "react-router-dom";
 import SearchBarInfo from "./SearchBarInfo";
 
 const Header = () => {
+  const navigate = useNavigate();
+
   return (
     <div>
       <SearchBarInfo />
@@ -10,7 +12,12 @@ const Header = () => {
           <span className="material-symbols-outlined">add_alert</span>
           알림받기
         </button>
-        <div className="text-4xl font-bold">눈송이</div>
+        <div
+          className="text-4xl font-bold cursor-pointer"
+          onClick={() => navigate("/")}
+        >
+          눈송이
+        </div>
         <div>
           <div className="text-sm/10">
             <span className="text-gray-400 mr-3">
@@ -38,7 +45,6 @@ const Header = () => {
           </div>
         </div>
       </div>
-      <NavBar />
     </div>
   );
 };
