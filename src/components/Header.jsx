@@ -1,3 +1,4 @@
+import NavBar from "./NavBar";
 import SearchBarInfo from "./SearchBarInfo";
 
 const Header = () => {
@@ -37,6 +38,7 @@ const Header = () => {
           </div>
         </div>
       </div>
+      <NavBar />
     </div>
   );
 };
